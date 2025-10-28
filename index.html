@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tasfiah Tasnim | CV</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Theme toggle and download buttons -->
+  <div class="top-buttons">
+    <button id="theme-toggle">🌙 Dark Mode</button>
+    <button id="download-btn">⬇️ Download PDF</button>
+  </div>
+
+  <div class="container" id="cv">
+    <header class="header">
+      <img src="profile.jpg.png" alt="Profile Photo" class="profile-pic" />
+      <div>
+        <h1>Tasfiah Tasnim Mrinmoyee</h1>
+        <h3>Computer Science Student | Data Analyst</h3>
+        <p class="summary">
+          Dedicated Computer Science student with a growing expertise in data analytics and machine learning. Eager to turn data into actionable insights and contribute to innovative, data-driven solutions.
+        </p>
+        <div class="contact">
+          <p>📞 +8801401702415 | ✉️ tasfiahmrinmoyee@gmail.com
+</p>
+          <p><a href="https://www.linkedin.com/in/tasfiah-tasnim-mrinmoyee-878793373?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B6yk7uuo%2FQ%2FKcT49%2FtKsCdw%3D%3D">LinkedIn</a> | <a href="#">@tasfiah-tasnim-mrinmoyee</a></p>
+        </div>
+      </div>
+    </header>
+
+    <section class="section">
+      <h2>Professional Experience</h2>
+      <div class="job">
+        <h3>Business Intelligence Analyst</h3>
+        <span class="date">2022 – Present | Company, New York</span>
+        <ul>
+          <li>Analyzed business data to identify key performance indicators.</li>
+          <li>Developed BI dashboards for strategic insights.</li>
+          <li>Collaborated with IT teams to automate reporting systems.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <h3>Business Operations Consultant</h3>
+        <span class="date">2018 – 2022 | Loneheart, New York</span>
+        <ul>
+          <li>Streamlined business processes to improve efficiency.</li>
+          <li>Supported data-driven decision-making initiatives.</li>
+          <li>Managed multiple stakeholder relationships.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Education</h2>
+      <div class="edu">
+        <h3>Bachelor's Degree, Computer Science </h3>
+        <p>American International University, Bangladesh — Present 2023</p>
+      </div>
+      <div class="edu">
+        <h3>Higher Secondary Certificate, Science</h3>
+        <p>Lalmatia Govt. Mohila College (LMC), Bangladesh — 2021</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Skills & Expertise</h2>
+      <div class="skills">
+        <span>Data Management</span>
+        <span>Business Analysis</span>
+        <span>Market Research</span>
+        <span>SQL & Power BI</span>
+        <span>Team Leadership</span>
+        <span>Strategic Planning</span>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© 2025 by Tasfiah Tasnim | Designed with ❤️</p>
+    </footer>
+  </div>
+
+  <!-- JavaScript for dark mode and PDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+  <script>
+    // Dark mode toggle
+    const toggleBtn = document.getElementById('theme-toggle');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      toggleBtn.textContent = document.body.classList.contains('dark-mode')
+        ? '☀️ Light Mode'
+        : '🌙 Dark Mode';
+    });
+
+    // Download as PDF
+    document.getElementById('download-btn').addEventListener('click', () => {
+      const cv = document.getElementById('cv');
+      const opt = {
+        margin: 0.3,
+        filename: 'Tasfiah_Tasnim_CV.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+      };
+      html2pdf().from(cv).set(opt).save();
+    });
+  </script>
+
+</body>
+</html>

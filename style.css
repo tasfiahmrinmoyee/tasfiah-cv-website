@@ -1,0 +1,271 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9fafc;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  transition: background 0.3s, color 0.3s;
+}
+
+.container {
+  width: 85%;
+  max-width: 900px;
+  margin: 60px auto;
+  background: #fff;
+  padding: 40px 50px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 15px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.profile-pic {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #0077b6;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 119, 182, 0.4);
+}
+
+/* Typography */
+h1 {
+  margin: 0;
+  font-size: 2em;
+  color: #111;
+}
+
+h3 {
+  margin-top: 5px;
+  color: #0077b6;
+  font-weight: 500;
+}
+
+.summary {
+  font-size: 0.95em;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+.contact a {
+  text-decoration: none;
+  color: #0077b6;
+  margin-right: 10px;
+}
+
+/* Sections */
+.section {
+  margin-top: 40px;
+}
+
+.section h2 {
+  color: #0077b6;
+  border-bottom: 2px solid #0077b6;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.job, .edu {
+  margin-bottom: 20px;
+}
+
+.job h3, .edu h3 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.date {
+  font-size: 0.9em;
+  color: #555;
+}
+
+ul {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills span {
+  background-color: #e9f5ff;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  color: #0077b6;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 0.85em;
+  color: #666;
+}
+
+/* Buttons at top */
+.top-buttons {
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px 60px 0 0;
+  gap: 10px;
+}
+
+.top-buttons button {
+  border: none;
+  background-color: #0077b6;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background 0.3s;
+}
+
+.top-buttons button:hover {
+  background-color: #005f8d;
+}
+
+/* 🌙 Improved Dark Mode Theme */
+.dark-mode {
+  background-color: #0e1117; /* deep modern dark */
+  color: #e8eaed; /* bright text for readability */
+}
+
+.dark-mode .container {
+  background-color: #161b22; /* dark card background */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+.dark-mode h1,
+.dark-mode h3,
+.dark-mode .job h3,
+.dark-mode .edu h3 {
+  color: #e8eaed;
+}
+
+.dark-mode .summary,
+.dark-mode p,
+.dark-mode ul li {
+  color: #c9d1d9; /* soft gray for paragraphs */
+}
+
+.dark-mode .section h2 {
+  color: #58a6ff; /* brighter blue section titles */
+  border-bottom: 2px solid #58a6ff;
+}
+
+.dark-mode a {
+  color: #58a6ff;
+}
+
+.dark-mode a:hover {
+  color: #79c0ff;
+}
+
+.dark-mode .skills span {
+  background-color: #21262d;
+  color: #58a6ff;
+  border: 1px solid #30363d;
+}
+
+.dark-mode .top-buttons button {
+  background-color: #58a6ff;
+  color: #0e1117;
+  font-weight: 600;
+}
+
+.dark-mode .top-buttons button:hover {
+  background-color: #79c0ff;
+}
+
+.dark-mode .footer {
+  color: #8b949e;
+}
+
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 30px 25px;
+  }
+
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-pic {
+    width: 110px;
+    height: 110px;
+  }
+
+  h1 {
+    font-size: 1.7em;
+  }
+
+  h3 {
+    font-size: 1em;
+  }
+
+  .summary {
+    font-size: 0.9em;
+  }
+
+  .skills span {
+    font-size: 0.85em;
+    padding: 6px 12px;
+  }
+
+  .top-buttons {
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .top-buttons button {
+    font-size: 0.8em;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  .profile-pic {
+    width: 90px;
+    height: 90px;
+  }
+
+  .skills {
+    justify-content: center;
+  }
+
+  .skills span {
+    padding: 6px 10px;
+    font-size: 0.8em;
+  }
+}
