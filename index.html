@@ -9,29 +9,43 @@
 </head>
 <body>
 
-  <!-- Theme toggle and download buttons -->
+  <!-- Top Buttons -->
   <div class="top-buttons">
     <button id="theme-toggle">🌙 Dark Mode</button>
     <button id="download-btn">⬇️ Download PDF</button>
   </div>
 
   <div class="container" id="cv">
+
+    <!-- Header Section -->
     <header class="header">
       <img src="profile.jpg.png" alt="Profile Photo" class="profile-pic" />
-      <div>
-        <h1>Tasfiah Tasnim Mrinmoyee</h1>
-        <h3>Computer Science Student | Data Analyst</h3>
-        <p class="summary">
-          Dedicated Computer Science student with a growing expertise in data analytics and machine learning. Eager to turn data into actionable insights and contribute to innovative, data-driven solutions.
-        </p>
-        <div class="contact">
-          <p>📞 +8801401702415 | ✉️ tasfiahmrinmoyee@gmail.com
-</p>
-          <p><a href="https://www.linkedin.com/in/tasfiah-tasnim-mrinmoyee-878793373?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B6yk7uuo%2FQ%2FKcT49%2FtKsCdw%3D%3D">LinkedIn</a> | <a href="https://github.com/tasfiahmrinmoyee">@tasfiah-mrinmoyee</a></p>
-        </div>
+      <h1>Tasfiah Tasnim Mrinmoyee</h1>
+      <h3>Computer Science Student | Data Analyst</h3>
+      <p class="summary">
+        Dedicated Computer Science student with a growing expertise in data analytics and machine learning. Eager to turn data into actionable insights and contribute to innovative, data-driven solutions.
+      </p>
+
+      <!-- Contact Info -->
+      <div class="contact">
+        <p>📞 +8801401702415 | ✉️ <a href="mailto:tasfiahmrinmoyee@gmail.com">tasfiahmrinmoyee@gmail.com</a></p>
+      </div>
+
+      <!-- Social Links -->
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/tasfiahmrinmoyee/" target="_blank" class="social-link">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" class="icon">
+          LinkedIn
+        </a>
+
+        <a href="https://github.com/tasfiah-tasnim" target="_blank" class="social-link">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" class="icon">
+          GitHub
+        </a>
       </div>
     </header>
 
+    <!-- Experience -->
     <section class="section">
       <h2>Professional Experience</h2>
       <div class="job">
@@ -55,11 +69,12 @@
       </div>
     </section>
 
+    <!-- Education -->
     <section class="section">
       <h2>Education</h2>
       <div class="edu">
-        <h3>Bachelor's Degree, Computer Science </h3>
-        <p>American International University, Bangladesh — Present 2023</p>
+        <h3>Bachelor's Degree, Computer Science</h3>
+        <p>American International University, Bangladesh — Present (2023)</p>
       </div>
       <div class="edu">
         <h3>Higher Secondary Certificate, Science</h3>
@@ -67,6 +82,7 @@
       </div>
     </section>
 
+    <!-- Skills -->
     <section class="section">
       <h2>Skills & Expertise</h2>
       <div class="skills">
@@ -79,15 +95,16 @@
       </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
-      <p>© 2025 by Tasfiah Tasnim | Designed with ❤️</p>
+      <p>© 2025 by Tasfiah Tasnim | Designed with ❤️ in VS Code</p>
     </footer>
   </div>
 
-  <!-- JavaScript for dark mode and PDF -->
+  <!-- JS for Dark Mode and PDF -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
   <script>
-    // Dark mode toggle
+    // Dark Mode Toggle
     const toggleBtn = document.getElementById('theme-toggle');
     toggleBtn.addEventListener('click', () => {
       document.body.classList.toggle('dark-mode');
@@ -96,7 +113,7 @@
         : '🌙 Dark Mode';
     });
 
-    // Download as PDF
+    // PDF Download
     document.getElementById('download-btn').addEventListener('click', () => {
       const cv = document.getElementById('cv');
       const opt = {
@@ -112,4 +129,3 @@
 
 </body>
 </html>
-
